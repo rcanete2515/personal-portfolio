@@ -1,0 +1,380 @@
+// ============================================
+// CONTAINER
+// ============================================
+.container {
+  @include container;
+}
+
+// ============================================
+// SECTIONS
+// ============================================
+section {
+  @include section;
+}
+
+.section {
+  &--light {
+    background-color: $color-white;
+  }
+  
+  &--gray {
+    background-color: $color-light;
+  }
+  
+  &--dark {
+    background-color: $color-dark;
+    color: $color-white;
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: $color-white;
+    }
+    
+    p {
+      color: rgba($color-white, 0.8);
+    }
+  }
+  
+  &--primary {
+    @include gradient-primary;
+    color: $color-white;
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: $color-white;
+    }
+    
+    p {
+      color: rgba($color-white, 0.9);
+    }
+  }
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  position: relative;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: $color-primary;
+    margin: $spacing-md auto 0;
+    border-radius: $border-radius-full;
+  }
+}
+
+.section--dark .section__title::after,
+.section--primary .section__title::after {
+  background-color: $color-white;
+}
+
+// ============================================
+// HEADER
+// ============================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-white;
+  box-shadow: $box-shadow-sm;
+  z-index: $z-index-fixed;
+  transition: all $transition-normal;
+  
+  &__container {
+    @include container;
+    @include flex-between;
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-sm;
+  }
+  
+  &__logo {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    color: $color-dark;
+    transition: color $transition-normal;
+  }
+  
+  &__nav {
+    display: none;
+    
+    @include respond-to(tablet) {
+      display: block;
+    }
+  }
+  
+  &__nav-list {
+    @include flex-center;
+    gap: $spacing-lg;
+  }
+  
+  &__nav-link {
+    color: $color-text;
+    font-weight: $font-weight-medium;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-sm;
+    transition: all $transition-fast;
+    
+    &:hover,
+    &.active {
+      color: $color-primary;
+      background-color: rgba($color-primary, 0.1);
+    }
+  }
+  
+  &__actions {
+    @include flex-center;
+    gap: $spacing-md;
+  }
+  
+  &__theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: $spacing-xs;
+    border-radius: $border-radius-sm;
+    transition: all $transition-fast;
+
+    .header__theme-icon {
+      display: flex;
+    }
+  }
+  
+  &__hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    padding: $spacing-xs;
+    cursor: pointer;
+    
+    @include respond-to(tablet) {
+      display: none;
+    }
+    
+    span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: $color-dark;
+      border-radius: $border-radius-full;
+      transition: all $transition-normal;
+    }
+    
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+}
+
+// Mobile menu
+.mobile-menu {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: $color-white;
+  box-shadow: $box-shadow-md;
+  padding: $spacing-lg;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all $transition-normal;
+  z-index: $z-index-dropdown;
+  
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  @include respond-to(tablet) {
+    display: none;
+  }
+  
+  &__list {
+    @include flex-column;
+    gap: $spacing-sm;
+  }
+  
+  &__link {
+    display: block;
+    padding: $spacing-sm;
+    color: $color-text;
+    font-weight: $font-weight-medium;
+    border-radius: $border-radius-sm;
+    transition: all $transition-fast;
+    
+    &:hover,
+    &.active {
+      color: $color-primary;
+      background-color: rgba($color-primary, 0.1);
+    }
+  }
+}
+
+// ============================================
+// FOOTER
+// ============================================
+.footer {
+  background-color: $color-dark;
+  color: $color-white;
+  padding: $spacing-xl 0 $spacing-lg;
+  
+  &__container {
+    @include container;
+  }
+  
+  &__content {
+    display: grid;
+    gap: $spacing-xl;
+    margin-bottom: $spacing-xl;
+    
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-to(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__section-title {
+    font-size: 1.25rem;
+    margin-bottom: $spacing-md;
+    color: $color-white;
+  }
+  
+  &__links {
+    @include respond-to(desktop) {
+      column-count: 2;
+    }
+  }
+  
+  &__link {
+    color: rgba($color-white, 0.8);
+    transition: color $transition-fast;
+    
+    &:hover {
+      color: $color-primary;
+    }
+  }
+  
+  &__social {
+    display: flex;
+    gap: $spacing-md;
+  }
+  
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba($color-white, 0.1);
+    border-radius: $border-radius-full;
+    color: $color-white;
+    font-size: 1.25rem;
+    transition: all $transition-normal;
+    
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white ;
+      transform: translateY(-4px);
+    }
+  }
+  
+  &__bottom {
+    border-top: 1px solid rgba($color-white, 0.1);
+    padding-top: $spacing-lg;
+    text-align: center;
+    color: rgba($color-white, 0.6);
+  }
+}
+
+// ============================================
+// BACK TO TOP BUTTON
+// ============================================
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background-color: $color-primary;
+  color: $color-white;
+  border: none;
+  border-radius: $border-radius-full;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all $transition-normal;
+  z-index: $z-index-sticky;
+  box-shadow: $box-shadow-md;
+  
+  &:hover {
+    background-color: $color-primary-hover;
+    transform: translateY(-4px);
+    box-shadow: $box-shadow-lg;
+  }
+  
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+// ============================================
+// GRID LAYOUTS
+// ============================================
+.grid {
+  display: grid;
+  gap: $spacing-lg;
+  
+  &--2 {
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  &--3 {
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-to(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &--4 {
+    @include respond-to(mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @include respond-to(desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

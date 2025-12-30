@@ -1,0 +1,241 @@
+// ============================================
+// RESET & BASE STYLES
+// ============================================
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-body;
+  font-size: $font-size-body;
+  line-height: $line-height-normal;
+  color: $color-text;
+  background-color: $color-white;
+  overflow-x: hidden;
+  transition: background-color $transition-normal, color $transition-normal;
+}
+
+// ============================================
+// TYPOGRAPHY
+// ============================================
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-md;
+  color: $color-dark;
+  transition: color $transition-normal;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+p {
+  margin-bottom: $spacing-md;
+  color: $color-text-light;
+  transition: color $transition-normal;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $color-primary-hover;
+  }
+}
+
+// ============================================
+// LISTS
+// ============================================
+ul,
+ol {
+  list-style: none;
+}
+
+// ============================================
+// IMAGES
+// ============================================
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ============================================
+// BUTTONS & INPUTS
+// ============================================
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+// ============================================
+// SELECTION
+// ============================================
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+::-moz-selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+// ============================================
+// FOCUS STYLES
+// ============================================
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}
+
+// ============================================
+// SCROLLBAR STYLING (Webkit browsers)
+// ============================================
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-light;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-primary;
+  border-radius: $border-radius-full;
+  
+  &:hover {
+    background: $color-primary-hover;
+  }
+}
+
+// ============================================
+// UTILITY CLASSES
+// ============================================
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// ============================================
+// ANIMATIONS
+// ============================================
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Animation classes
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s $ease-out-expo forwards;
+}
+
+.slide-in-left {
+  opacity: 0;
+  animation: slideInLeft 0.6s $ease-out-expo forwards;
+}
+
+.slide-in-right {
+  opacity: 0;
+  animation: slideInRight 0.6s $ease-out-expo forwards;
+}
+
+.scale-in {
+  opacity: 0;
+  animation: scaleIn 0.6s $ease-out-expo forwards;
+}
+
+// Stagger delays for multiple items
+@for $i from 1 through 10 {
+  .delay-#{$i} {
+    animation-delay: #{$i * 0.1}s;
+  }
+}

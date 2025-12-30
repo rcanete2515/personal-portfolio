@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Frontend Web Developer with 5+ years of experience building responsive, high-performance websites. Expertise in HTML5, CSS3, JavaScript, and WordPress development."
+    />
+    <meta
+      name="keywords"
+      content="Frontend Developer, Web Developer, HTML, CSS, JavaScript, React, WordPress, Portfolio"
+    />
+    <meta name="author" content="Your Name" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <meta property="og:title" content="Your Name - Frontend Web Developer" />
+    <meta
+      property="og:description"
+      content="Building Responsive, High-Performance Web Experiences"
+    />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/images/og-image.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yourwebsite.com/" />
+    <meta
+      property="twitter:title"
+      content="Your Name - Frontend Web Developer"
+    />
+    <meta
+      property="twitter:description"
+      content="Building Responsive, High-Performance Web Experiences"
+    />
+    <meta
+      property="twitter:image"
+      content="https://yourwebsite.com/images/twitter-image.jpg"
+    />
+
+    <title>Your Name - Frontend Web Developer Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Your Name",
+        "jobTitle": "Frontend Web Developer",
+        "url": "https://yourwebsite.com",
+        "sameAs": [
+          "https://github.com/yourusername",
+          "https://linkedin.com/in/yourusername"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="header__container">
+        <a href="#home" class="header__logo">Your Name</a>
+
+        <nav class="header__nav" aria-label="Main navigation">
+          <ul class="header__nav-list">
+            <li><a href="#home" class="header__nav-link active">Home</a></li>
+            <li><a href="#about" class="header__nav-link">About</a></li>
+            <li><a href="#skills" class="header__nav-link">Skills</a></li>
+            <li>
+              <a href="#experience" class="header__nav-link">Experience</a>
+            </li>
+            <li><a href="#projects" class="header__nav-link">Projects</a></li>
+            <li><a href="#contact" class="header__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button
+            class="header__theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+          >
+            <span class="header__theme-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#212121"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+            </span>
+          </button>
+
+          <button
+            class="header__hamburger"
+            id="hamburger"
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <ul class="mobile-menu__list">
+        <li><a href="#home" class="mobile-menu__link active">Home</a></li>
+        <li><a href="#about" class="mobile-menu__link">About</a></li>
+        <li><a href="#skills" class="mobile-menu__link">Skills</a></li>
+        <li><a href="#experience" class="mobile-menu__link">Experience</a></li>
+        <li><a href="#projects" class="mobile-menu__link">Projects</a></li>
+        <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero section--light" id="home">
+        <div class="container">
+          <div class="hero__content">
+            <img
+              src="images/profile.jpg"
+              alt="Your Name - Frontend Developer"
+              class="hero__image"
+            />
+            <h1 class="hero__title">Your Name</h1>
+            <p class="hero__subtitle">Frontend Web Developer</p>
+            <p class="hero__tagline">
+              Building Responsive, High-Performance Web Experiences
+            </p>
+            <div class="hero__buttons">
+              <a href="#projects" class="btn btn--secondary">View Projects</a>
+              <a href="assets/resume.pdf" download class="btn btn--secondary"
+                >Download Resume</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="section--light" id="about">
+        <div class="container">
+          <h2 class="section__title">About Me</h2>
+
+          <div class="about__content">
+            <p
+              style="text-align: center; max-width: 800px; margin: 0 auto 3rem"
+            >
+              Frontend Web Developer with 5+ years of experience building
+              responsive, high-performance websites. Expertise in HTML5, CSS3,
+              JavaScript, and WordPress development with a focus on translating
+              design mockups into pixel-perfect, SEO-optimized code. Proven
+              track record delivering projects on time in Agile environments.
+            </p>
+
+            <div class="stats">
+              <div class="card card--stat">
+                <div class="card__icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="50" height="50">
+                    <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
+                  </svg>
+                </div>
+                <div class="card__number" data-count="5">0</div>
+                <div class="card__label">Years Experience</div>
+              </div>
+
+              <div class="card card--stat">
+                <div class="card__icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="50" height="50">
+                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2zm0 3.99l5.21 13.42L12 17.34l-5.21 2.07L12 5.99z"/>
+                  </svg>
+                </div>
+                <div class="card__number" data-count="25">0</div>
+                <div class="card__label">Projects Completed</div>
+              </div>
+
+              <div class="card card--stat">
+                <div class="card__icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="50" height="50">
+                    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                  </svg>
+                </div>
+                <div class="card__number" data-count="6">0</div>
+                <div class="card__label">Clients Maintained</div>
+              </div>
+
+              <div class="card card--stat">
+                <div class="card__icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="50" height="50">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                  </svg>
+                </div>
+                <div class="card__number" data-count="100">0</div>
+                <div class="card__label">% On-Time Delivery</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section--gray" id="skills">
+        <div class="container">
+          <h2 class="section__title">Technical Skills</h2>
+
+          <div class="skills">
+            <div class="skills__category">
+              <div class="skills__grid">
+
+                <div class="skills__item" data-proficiency="advanced">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 32 32" fill="currentColor">
+                      <path d="M4.665 3.411l2.063 23.176 9.258 2.574 9.284-2.578 2.065-23.172h-22.671zM8.951 8.911l-0.068-0.763h7.107v2.842h-4.005l0.259 2.911h3.746v2.842h-6.341l-0.698-7.833zM22.518 14.665l-0.667 7.483-0.043 0.48-5.822 1.616-5.814-1.616-0.398-4.463h2.849l0.202 2.267 3.163 0.854 3.165-0.856 0.329-3.686h-3.485v-2.842h6.587l-0.069 0.763zM23.032 8.911l-0.129 1.441-0.057 0.639h-6.846v-2.842h7.1l-0.068 0.762z"></path>
+                    </svg>
+                  </div>
+                  <span class="skills__name">HTML5</span>
+                  <div class="skills__tooltip">Advanced</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="advanced">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 32 32" fill="currentColor">
+                      <path d="M8.272 6.044L7.539 9.74H22.57l-.472 2.378H7.053l-.722 3.696h15.033l-.846 4.216-6.049 2.004-5.251-2.004.362-1.828H5.884L5 22.632l8.686 3.324 10.003-3.324L27 6.044z"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">CSS3</span>
+                  <div class="skills__tooltip">Advanced</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="advanced">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 32 32" fill="currentColor">
+                      <path d="M2 2v28h28V2H2zm15.238 21.837c0 2.725-1.6 3.969-3.931 3.969-2.106 0-3.325-1.087-3.95-2.406l2.144-1.294c.413.731.788 1.35 1.694 1.35.863 0 1.412-.338 1.412-1.656v-8.944h2.631v9.981zm6.224 3.969c-2.444 0-4.025-1.162-4.794-2.688l2.144-1.237c.563.919 1.3 1.6 2.594 1.6 1.087 0 1.788-.544 1.788-1.3 0-.9-.713-1.219-1.919-1.75l-.656-.281c-1.9-.806-3.156-1.825-3.156-3.969 0-1.975 1.506-3.475 3.85-3.475 1.675 0 2.875.581 3.738 2.106l-2.05 1.313c-.45-.806-.938-1.125-1.694-1.125-.769 0-1.256.488-1.256 1.125 0 .788.488 1.106 1.619 1.594l.656.281c2.238.956 3.494 1.938 3.494 4.137 0 2.363-1.863 3.669-4.363 3.669z"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">JavaScript</span>
+                  <div class="skills__tooltip">Advanced</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="advanced">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 32 32" fill="currentColor">
+                      <path d="M16 2.5c-7.456 0-13.5 6.044-13.5 13.5s6.044 13.5 13.5 13.5 13.5-6.044 13.5-13.5-6.044-13.5-13.5-13.5zM16 26.5c-5.799 0-10.5-4.701-10.5-10.5s4.701-10.5 10.5-10.5 10.5 4.701 10.5 10.5-4.701 10.5-10.5 10.5z"/>
+                      <path d="M19.5 12h-7c-0.827 0-1.5 0.673-1.5 1.5v5c0 0.827 0.673 1.5 1.5 1.5h7c0.827 0 1.5-0.673 1.5-1.5v-5c0-0.827-0.673-1.5-1.5-1.5zM18.5 17.5h-5v-3h5v3z"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">SCSS</span>
+                  <div class="skills__tooltip">Advanced</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="advanced">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 32 32" fill="currentColor">
+                      <path d="M16 2.5c-7.456 0-13.5 6.044-13.5 13.5s6.044 13.5 13.5 13.5 13.5-6.044 13.5-13.5-6.044-13.5-13.5-13.5zM16 26.5c-5.799 0-10.5-4.701-10.5-10.5s4.701-10.5 10.5-10.5 10.5 4.701 10.5 10.5-4.701 10.5-10.5 10.5z"/>
+                      <path d="M11 13h10v2h-4v4h-2v-4h-4z"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">jQuery</span>
+                  <div class="skills__tooltip">Advanced</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="intermediate">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 10.11A1.87 1.87 0 1 1 10.13 12 1.88 1.88 0 0 1 12 10.11M7.37 20c.63.38 2-.2 3.6-1.7a24.22 24.22 0 0 1-1.51-1.9A22.7 22.7 0 0 1 7.06 16c-.51 2.14-.32 3.61.31 4m.71-5.74l-.29-.51a7.91 7.91 0 0 0-.29.86c.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9s-1.17 0-1.71.03c-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03s1.17 0 1.71-.03c.29-.47.61-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72h-1.18c.2.27.4.5.59-.72M16.62 4c-.62-.38-2 .2-3.59 1.7.52.6 1 1.24 1.51 1.9.82.08 1.63.2 2.4.36.51-2.14.32-3.61-.32-4m-.7 5.74l.29.51c.11-.25.21-.51.29-.86-.27-.06-.57-.11-.88-.16l.3.51m1.45-7.05c1.47.84 1.63 3.05 1.01 5.63 2.54.75 4.37 1.99 4.37 3.68s-1.83 2.93-4.37 3.68c.62 2.58.46 4.79-1.01 5.63-1.46.84-3.45-.12-5.37-1.95-1.92 1.83-3.91 2.79-5.38 1.95-1.46-.84-1.62-3.05-1-5.63-2.54-.75-4.37-1.99-4.37-3.68s1.83-2.93 4.37-3.68c-.62-2.58-.46-4.79 1-5.63 1.47-.84 3.46.12 5.38 1.95 1.92-1.83 3.91-2.79 5.37-1.95M17.08 12c.34.75.64 1.5.89 2.26 2.1-.63 3.28-1.53 3.28-2.26s-1.18-1.63-3.28-2.26c-.25.76-.55 1.51-.89 2.26M6.92 12c-.34-.75-.64-1.5-.89-2.26-2.1.63-3.28 1.53-3.28 2.26s1.18 1.63 3.28 2.26c.25-.76.55-1.51.89-2.26m9.07 1.93l-.3.51c.31-.05.61-.1.88-.16-.08-.35-.18-.61-.29-.86l-.29.51m-2.59 4.65c1.92 1.83 3.91 2.79 5.38 1.95 1.47-.84 1.63-3.05 1.01-5.63-2.54.75-4.37 1.99-4.37 3.68 0 .34.04.67.11 1-1.92-1.83-3.91-2.79-5.38-1.95-1.46.84-1.62 3.05-1 5.63 2.54-.75 4.37-1.99 4.37-3.68 0-.34-.04-.67-.11-1z"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">React.js</span>
+                  <div class="skills__tooltip">Intermediate</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="intermediate">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35.98 1 2.09 2.15 4.59 2.15 2.67 0 4.33-1.33 5-4-1 1.33-2.17-1.83-3.5-1.5-.76-.19-1.3-.74-1.91-1.35C15.61 7.15 14.5 6 12 6m-5 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.3.74 1.91 1.35C8.39 16.85 9.5 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C10.61 13.15 9.5 12 7 12z"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">Tailwind</span>
+                  <div class="skills__tooltip">Intermediate</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="intermediate">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">Bootstrap</span>
+                  <div class="skills__tooltip">Intermediate</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="intermediate">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M4 4h4v4H4V4m6 0h4v4h-4V4m6 0h4v4h-4V4M4 10h4v4H4v-4m6 0h4v4h-4v-4m6 0h4v4h-4v-4M4 16h4v4H4v-4m6 0h4v4h-4v-4m6 0h4v4h-4v-4"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">Flexbox & Grid</span>
+                  <div class="skills__tooltip">Intermediate</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="advanced">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M4 4h16v16H4V4m2 2v12h12V6H6m2 2h8v2H8V8m0 4h8v2H8v-2m0 4h5v2H8v-2z"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">Figma to Code</span>
+                  <div class="skills__tooltip">Advanced</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="advanced">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12.158 12.786L9.46 20.625c.806.237 1.657.366 2.54.366 1.047 0 2.051-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.572m-5.14-3.5l2.95 8.084c.813.938 1.685 1.755 2.604 2.428L8.004 9.286c-.282-.752-.463-1.378-.463-1.925 0-.494.047-.952.14-1.361H7.49c-1.06 0-1.92.863-1.92 1.925 0 .513.197 1.02.448 1.361m11.723-2.36c0-1.257-.452-2.126-.84-2.805-.516-.84-1 1.55-1-2.389 0-.934.672-1.803 1.613-1.803.043 0 .084.005.125.008-1.71-1.564-3.99-2.518-6.496-2.518-3.378 0-6.35 1.73-8.084 4.35.227.007.44.011.622.011 1.01 0 2.574-.123 2.574-.123.52-.031.582.731.062.793 0 0-.524.062-1.107.093l3.522 10.477 2.117-6.348-1.506-4.129c-.52-.031-.99-.093-.99-.093-.52-.062-.458-.824.062-.793 0 0 1.595.123 2.543.123.99 0 2.574-.123 2.574-.123.52-.031.582.731.062.793 0 0-.524.062-1.107.093l3.495 10.402 .965-3.223c.418-1.34.736-2.305.736-3.137m-9.668 11.074c.84.453 1.787.71 2.795.71.97 0 1.898-.214 2.738-.598-.022-.035-.043-.072-.061-.11l-2.472-6.78-2.472 6.78-.528-.002m12.927-8.473c.042.31.065.643.065.999 0 .984-.184 2.092-.74 3.477l-2.965 8.577c2.887-1.683 4.826-4.8 4.826-8.351 0-1.39-.29-2.713-.811-3.911-.026.069-.051.14-.076.209z"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">WordPress</span>
+                  <div class="skills__tooltip">Advanced</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="intermediate">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M21.62 11.108l-8.731-8.729a2.877 2.877 0 0 0-4.067 0l-1.816 1.816 2.3 2.3a1.715 1.715 0 0 1 2.167 2.185l2.216 2.216a1.715 1.715 0 1 1-1.023.977l-2.067-2.067v5.446a1.715 1.715 0 1 1-1.371-.117V9.692a1.715 1.715 0 0 1-.93-2.25L5.988 5.133.633 10.487a2.877 2.877 0 0 0 0 4.067l8.729 8.729a2.877 2.877 0 0 0 4.067 0l8.691-8.691a2.877 2.877 0 0 0 0-4.067"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">Git/GitHub</span>
+                  <div class="skills__tooltip">Intermediate</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="advanced">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">SEO</span>
+                  <div class="skills__tooltip">Advanced</div>
+                </div>
+
+                <div class="skills__item" data-proficiency="advanced">
+                  <div class="skills__icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"/>
+                    </svg>
+                  </div>
+                  <span class="skills__name">Responsive Design</span>
+                  <div class="skills__tooltip">Advanced</div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="section--light" id="experience">
+        <div class="container">
+          <h2 class="section__title">Work Experience</h2>
+
+          <div class="timeline">
+            <!-- Current Position -->
+            <div class="timeline__item">
+              <div class="timeline__header">
+                <h3 class="timeline__title">Frontend Web Developer</h3>
+                <div class="timeline__meta">
+                  <span class="timeline__company">Company Name</span>
+                  <span class="timeline__period">April 2022 – Present</span>
+                </div>
+              </div>
+              <ul class="timeline__description">
+                <li>
+                  Convert 5+ Figma designs monthly into responsive HTML/CSS
+                  prototypes with 100% on-time sprint delivery
+                </li>
+                <li>
+                  Develop reusable React.js components for enterprise
+                  applications
+                </li>
+                <li>
+                  Implement technical SEO best practices improving Core Web
+                  Vitals scores from 75 to 85 average
+                </li>
+                <li>
+                  Maintain and enhance 5+ existing client websites ensuring
+                  optimal performance and functionality
+                </li>
+                <li>
+                  Conduct cross-browser testing ensuring consistent UX across
+                  all platforms
+                </li>
+                <li>
+                  Collaborate with backend developers for seamless API
+                  integration
+                </li>
+              </ul>
+            </div>
+
+            <!-- Previous Position -->
+            <div class="timeline__item">
+              <div class="timeline__header">
+                <h3 class="timeline__title">Frontend Web Developer</h3>
+                <div class="timeline__meta">
+                  <span class="timeline__company">Previous Company</span>
+                  <span class="timeline__period"
+                    >September 2019 – July 2021</span
+                  >
+                </div>
+              </div>
+              <ul class="timeline__description">
+                <li>
+                  Developed 25+ responsive websites and landing pages using
+                  HTML5, CSS3, JavaScript, and Bootstrap
+                </li>
+                <li>
+                  Built custom WordPress themes and integrated third-party
+                  plugins
+                </li>
+                <li>
+                  Improved website performance by 35% through optimization
+                  techniques
+                </li>
+                <li>
+                  Reduced user-reported bugs by 30% through thorough
+                  cross-browser testing
+                </li>
+                <li>
+                  Delivered projects on deadline collaborating with design and
+                  backend teams
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="section--gray" id="projects">
+        <div class="container">
+          <h2 class="section__title">Featured Projects</h2>
+
+          <!-- Filter Buttons -->
+          <div class="filter">
+            <div class="filter__buttons">
+              <button class="filter__button active" data-filter="all">
+                All Projects
+              </button>
+              <button class="filter__button" data-filter="website">
+                Websites
+              </button>
+              <button class="filter__button" data-filter="landing">
+                Landing Pages
+              </button>
+              <button class="filter__button" data-filter="wordpress">
+                WordPress
+              </button>
+              <button class="filter__button" data-filter="react">React</button>
+              <button class="filter__button" data-filter="ecommerce">
+                E-commerce
+              </button>
+            </div>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="grid grid--3">
+            <!-- Project 1 -->
+            <div class="card card--project" data-category="website ecommerce">
+              <img
+                src="images/projects/project-1.jpg"
+                alt="E-commerce Website"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">Modern E-commerce Platform</h3>
+                <p class="card__description">
+                  Fully responsive e-commerce website with shopping cart,
+                  product filters, and checkout flow.
+                </p>
+                <div class="card__tags">
+                  <span class="card__tag">HTML5</span>
+                  <span class="card__tag">CSS3</span>
+                  <span class="card__tag">JavaScript</span>
+                  <span class="card__tag">Bootstrap</span>
+                </div>
+                <a href="#" class="btn btn--primary btn--small">View Project</a>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card card--project" data-category="landing">
+              <img
+                src="images/projects/project-2.jpg"
+                alt="SaaS Landing Page"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">SaaS Product Landing Page</h3>
+                <p class="card__description">
+                  High-converting landing page with animations, testimonials,
+                  and pricing tables.
+                </p>
+                <div class="card__tags">
+                  <span class="card__tag">HTML5</span>
+                  <span class="card__tag">SCSS</span>
+                  <span class="card__tag">JavaScript</span>
+                </div>
+                <a href="#" class="btn btn--primary btn--small">View Project</a>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card card--project" data-category="wordpress website">
+              <img
+                src="images/projects/project-3.jpg"
+                alt="WordPress Business Site"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">Corporate WordPress Theme</h3>
+                <p class="card__description">
+                  Custom WordPress theme for corporate website with blog,
+                  services, and contact sections.
+                </p>
+                <div class="card__tags">
+                  <span class="card__tag">WordPress</span>
+                  <span class="card__tag">PHP</span>
+                  <span class="card__tag">CSS3</span>
+                </div>
+                <a href="#" class="btn btn--primary btn--small">View Project</a>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="card card--project" data-category="react website">
+              <img
+                src="images/projects/project-4.jpg"
+                alt="React Dashboard"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">React Admin Dashboard</h3>
+                <p class="card__description">
+                  Interactive admin dashboard with charts, data tables, and user
+                  management.
+                </p>
+                <div class="card__tags">
+                  <span class="card__tag">React</span>
+                  <span class="card__tag">JavaScript</span>
+                  <span class="card__tag">Tailwind</span>
+                </div>
+                <a href="#" class="btn btn--primary btn--small">View Project</a>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="card card--project" data-category="landing">
+              <img
+                src="images/projects/project-5.jpg"
+                alt="App Landing Page"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">Mobile App Landing Page</h3>
+                <p class="card__description">
+                  Sleek landing page for mobile app with feature showcase and
+                  download buttons.
+                </p>
+                <div class="card__tags">
+                  <span class="card__tag">HTML5</span>
+                  <span class="card__tag">CSS3</span>
+                  <span class="card__tag">JavaScript</span>
+                </div>
+                <a href="#" class="btn btn--primary btn--small">View Project</a>
+              </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="card card--project" data-category="website">
+              <img
+                src="images/projects/project-6.jpg"
+                alt="Portfolio Website"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h3 class="card__title">Creative Portfolio Website</h3>
+                <p class="card__description">
+                  Portfolio website for creative professional with gallery and
+                  contact form.
+                </p>
+                <div class="card__tags">
+                  <span class="card__tag">HTML5</span>
+                  <span class="card__tag">SCSS</span>
+                  <span class="card__tag">JavaScript</span>
+                </div>
+                <a href="#" class="btn btn--primary btn--small">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section--gray" id="contact">
+        <div class="container">
+          <h2 class="section__title">Get In Touch</h2>
+
+          <div class="grid grid--2" style="align-items: start">
+            <!-- Contact Info -->
+            <div>
+              <h3 style="margin-bottom: 1.5rem">Contact Information</h3>
+              <div style="display: flex; flex-direction: column; gap: 1rem">
+                <div style="display: flex; align-items: start; gap: 0.75rem">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="flex-shrink: 0; margin-top: 2px">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                  <div>
+                    <strong>Email:</strong><br />
+                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: start; gap: 0.75rem">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="flex-shrink: 0; margin-top: 2px">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                  <div>
+                    <strong>Phone:</strong><br />
+                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: start; gap: 0.75rem">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="flex-shrink: 0; margin-top: 2px">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                  <div>
+                    <strong>Location:</strong><br />
+                    Makati City, Metro Manila, Philippines
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 2rem">
+                <h4 style="margin-bottom: 1rem">Connect With Me</h4>
+                <div class="social">
+                  <a
+                    href="https://linkedin.com/in/yourusername"
+                    class="social__link"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                    </svg>
+                  </a>
+                  <a
+                    href="https://facebook.com/yourusername"
+                    class="social__link"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                      <path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div>
+              <form class="form" id="contactForm" novalidate>
+                <div class="form__group">
+                  <label for="name" class="form__label">Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form__input"
+                    required
+                  />
+                  <span class="form__error" id="nameError"></span>
+                </div>
+
+                <div class="form__group">
+                  <label for="email" class="form__label">Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form__input"
+                    required
+                  />
+                  <span class="form__error" id="emailError"></span>
+                </div>
+
+                <div class="form__group">
+                  <label for="message" class="form__label">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form__textarea"
+                    required
+                  ></textarea>
+                  <span class="form__error" id="messageError"></span>
+                </div>
+
+                <button type="submit" class="btn btn--primary">
+                  Send Message
+                </button>
+                <div
+                  class="form__success"
+                  id="formSuccess"
+                  style="display: none; margin-top: 1rem"
+                >
+                  ✅ Thank you! Your message has been sent successfully.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+      <div class="modal__backdrop"></div>
+      <div class="modal__content">
+        <button class="modal__close" aria-label="Close modal">&times;</button>
+        <img src="" alt="" class="modal__image" id="modalImage" />
+        <h3 class="modal__title" id="modalTitle"></h3>
+        <p class="modal__description" id="modalDescription"></p>
+        <div class="modal__tags" id="modalTags"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__content">
+          <div>
+            <h3 class="footer__section-title">Your Name</h3>
+            <p style="color: rgba(255, 255, 255, 0.8)">
+              Frontend Web Developer passionate about creating beautiful,
+              functional websites.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="footer__section-title">Quick Links</h3>
+            <ul class="footer__links">
+              <li><a href="#home" class="footer__link">Home</a></li>
+              <li><a href="#about" class="footer__link">About</a></li>
+              <li><a href="#skills" class="footer__link">Skills</a></li>
+              <li><a href="#experience" class="footer__link">Experience</a></li>
+              <li><a href="#projects" class="footer__link">Projects</a></li>
+              <li><a href="#contact" class="footer__link">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__section-title">Follow Me</h3>
+            <div class="footer__social">
+              <a
+                href="https://linkedin.com/in/yourusername"
+                class="footer__social-link"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </a>
+              <a
+                href="https://facebook.com/yourusername"
+                class="footer__social-link"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                  <path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      ↑
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js" type="module"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/skill-animations.js"></script>
+    <script src="js/project-filter.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/modal.js"></script>
+  </body>
+</html>

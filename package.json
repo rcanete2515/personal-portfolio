@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for a Frontend Web Developer",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass css/main.scss css/main.css",
+    "sass:watch": "sass --watch css/main.scss:css/main.css",
+    "build": "sass css/main.scss css/main.css --style=compressed",
+    "dev": "sass --watch css/main.scss:css/main.css"
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "web-developer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

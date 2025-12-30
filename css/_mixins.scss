@@ -1,0 +1,214 @@
+// ============================================
+// RESPONSIVE BREAKPOINT MIXIN
+// ============================================
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (min-width: $breakpoint-mobile) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (min-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  } @else if $breakpoint == wide {
+    @media (min-width: $breakpoint-wide) {
+      @content;
+    }
+  }
+}
+
+// ============================================
+// FLEXBOX HELPERS
+// ============================================
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// ============================================
+// BUTTON MIXIN
+// ============================================
+@mixin button-base {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  font-family: $font-body;
+  font-size: 1rem;
+  font-weight: $font-weight-medium;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  transition: all $transition-normal;
+  outline: none;
+  
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background-color: $color-primary;
+  color: $color-white;
+  
+  &:hover {
+    background-color: $color-primary-hover;
+    transform: translateY(-2px);
+    box-shadow: $box-shadow-md;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background-color: transparent;
+  color: $color-primary;
+  border: 2px solid $color-primary;
+  
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// ============================================
+// CARD MIXIN
+// ============================================
+@mixin card {
+  background-color: $color-white;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $box-shadow-xxl;
+  transition: all $transition-normal;
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+// ============================================
+// GRADIENT BACKGROUNDS
+// ============================================
+@mixin gradient-primary {
+  background: linear-gradient(135deg, $color-primary 0%, darken($color-primary, 10%) 100%);
+}
+
+@mixin gradient-overlay {
+  background: linear-gradient(135deg, rgba($color-primary, 0.9) 0%, rgba(darken($color-primary, 15%), 0.9) 100%);
+}
+
+// ============================================
+// TEXT TRUNCATION
+// ============================================
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// ============================================
+// ANIMATIONS
+// ============================================
+@mixin fade-in {
+  animation: fadeIn $transition-slow $ease-out-expo;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ============================================
+// CONTAINER
+// ============================================
+@mixin container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+// ============================================
+// SECTION
+// ============================================
+@mixin section {
+  padding: $section-padding-mobile;
+  
+  @include respond-to(tablet) {
+    padding: $section-padding-tablet;
+  }
+  
+  @include respond-to(desktop) {
+    padding: $section-padding-desktop;
+  }
+}
+
+// ============================================
+// GRID SYSTEM
+// ============================================
+@mixin grid($columns: 1, $gap: $spacing-lg) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// ============================================
+// HOVER EFFECT
+// ============================================
+@mixin hover-lift {
+  transition: transform $transition-normal, box-shadow $transition-normal;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $box-shadow-lg;
+  }
+}
+
+// ============================================
+// FOCUS STYLES
+// ============================================
+@mixin focus-outline {
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
