@@ -1,10 +1,6 @@
 # Dependencies
 node_modules/
 
-# Compiled CSS
-css/main.css
-css/main.css.map
-
 # OS files
 .DS_Store
 Thumbs.db
