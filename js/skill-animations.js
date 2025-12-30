@@ -3,6 +3,9 @@
 // ============================================
 
 function initSkillAnimations() {
+    if (window.skillAnimationsInitialized) return;
+    window.skillAnimationsInitialized = true;
+
     // ============================================
     // SKILL BAR ANIMATION
     // ============================================

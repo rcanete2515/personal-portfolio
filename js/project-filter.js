@@ -3,6 +3,9 @@
 // ============================================
 
 function initProjectFilter() {
+    if (window.projectFilterInitialized) return;
+    window.projectFilterInitialized = true;
+
     const filterButtons = document.querySelectorAll('.filter__button');
     const projectCards = document.querySelectorAll('.card--project');
     

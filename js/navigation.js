@@ -3,6 +3,10 @@
 // ============================================
 
 function initNavigation() {
+    // Prevent double initialization
+    if (window.navigationInitialized) return;
+    window.navigationInitialized = true;
+
     const header = document.getElementById('header');
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');

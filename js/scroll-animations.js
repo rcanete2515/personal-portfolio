@@ -3,6 +3,9 @@
 // ============================================
 
 function initScrollAnimations() {
+    if (window.scrollAnimationsInitialized) return;
+    window.scrollAnimationsInitialized = true;
+
     // ============================================
     // INTERSECTION OBSERVER OPTIONS
     // ============================================

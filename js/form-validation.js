@@ -3,6 +3,9 @@
 // ============================================
 
 function initFormValidation() {
+    if (window.formValidationInitialized) return;
+    window.formValidationInitialized = true;
+
     const form = document.getElementById('contactForm');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
