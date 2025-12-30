@@ -122,25 +122,58 @@ function initFormValidation() {
             const isMessageValid = validateMessage();
             
             if (isNameValid && isEmailValid && isMessageValid) {
-                // Form is valid - show success message
-                formSuccess.style.display = 'block';
-                
-                // Reset form after 2 seconds
-                setTimeout(() => {
-                    form.reset();
-                    formSuccess.style.display = 'none';
-                    
-                    // Remove success classes
-                    nameInput.classList.remove('success');
-                    emailInput.classList.remove('success');
-                    messageInput.classList.remove('success');
-                }, 3000);
-                
-                // Here you would typically send the form data to a server
-                console.log('Form submitted successfully!', {
-                    name: nameInput.value,
-                    email: emailInput.value,
-                    message: messageInput.value
+                // Show loading state
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+
+                // Create FormData
+                const formData = new FormData(form);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+
+                // Send to Web3Forms
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        // Success!
+                        formSuccess.textContent = '✅ Message sent successfully!';
+                        formSuccess.style.display = 'block';
+                        form.reset();
+                        
+                        // Remove success classes
+                        nameInput.classList.remove('success');
+                        emailInput.classList.remove('success');
+                        messageInput.classList.remove('success');
+
+                        setTimeout(() => {
+                            formSuccess.style.display = 'none';
+                        }, 5000);
+                    } else {
+                        // API Error
+                        console.log(response);
+                        formSuccess.textContent = '❌ Something went wrong. Please try again.';
+                        formSuccess.style.display = 'block';
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    formSuccess.textContent = '❌ Something went wrong. Please try again.';
+                    formSuccess.style.display = 'block';
+                })
+                .finally(() => {
+                    // Reset button
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
                 });
             } else {
                 // Scroll to first error
