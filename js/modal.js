@@ -4,41 +4,23 @@
 
 // Project data for modal
 const projectData = {
-  'Modern E-commerce Platform': {
-    image: 'images/projects/project-1.jpg',
-    title: 'Modern E-commerce Platform',
-    description: 'Fully responsive e-commerce website with shopping cart, product filters, and checkout flow. Built with modern web technologies for optimal performance.',
-    tags: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap']
-  },
-  'SaaS Product Landing Page': {
-    image: 'images/projects/project-2.jpg',
-    title: 'SaaS Product Landing Page',
-    description: 'High-converting landing page with animations, testimonials, and pricing tables. Optimized for conversions and user engagement.',
-    tags: ['HTML5', 'SCSS', 'JavaScript']
-  },
-  'Corporate WordPress Theme': {
-    image: 'images/projects/project-3.jpg',
-    title: 'Corporate WordPress Theme',
-    description: 'Custom WordPress theme for corporate website with blog, services, and contact sections. Fully customizable and SEO-optimized.',
-    tags: ['WordPress', 'PHP', 'CSS3']
-  },
-  'React Admin Dashboard': {
-    image: 'images/projects/project-4.jpg',
-    title: 'React Admin Dashboard',
-    description: 'Interactive admin dashboard with charts, data tables, and user management. Built with React for a smooth, dynamic user experience.',
-    tags: ['React', 'JavaScript', 'Tailwind']
-  },
-  'Mobile App Landing Page': {
-    image: 'images/projects/project-5.jpg',
-    title: 'Mobile App Landing Page',
-    description: 'Sleek landing page for mobile app with feature showcase and download buttons. Designed to drive app downloads and user engagement.',
+  'Business Landing Website': {
+    image: 'images/projects/rrrc-project-1.webp',
+    title: 'Business Landing Website',
+    description: 'Fully responsive website.',
     tags: ['HTML5', 'CSS3', 'JavaScript']
   },
-  'Creative Portfolio Website': {
-    image: 'images/projects/project-6.jpg',
-    title: 'Creative Portfolio Website',
-    description: 'Portfolio website for creative professional with gallery and contact form. Showcases work in an elegant, professional manner.',
-    tags: ['HTML5', 'SCSS', 'JavaScript']
+  'Product Landing Website': {
+    image: 'images/projects/rrrc-project-2.webp',
+    title: 'Product Landing Website',
+    description: 'Fully responsive website.',
+    tags: ['HTML5', 'CSS3', 'JavaScript']
+  },
+  'Business WordPress Website': {
+    image: 'images/projects/rrrc-project-3.webp',
+    title: 'Business WordPress Website',
+    description: 'Custom WordPress theme for corporate website with blog, services, and contact sections.',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Wordpress']
   }
 };
 

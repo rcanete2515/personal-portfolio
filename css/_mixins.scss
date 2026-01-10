@@ -71,6 +71,7 @@
   
   &:hover {
     background-color: $color-primary-hover;
+    color: $color-white;
     transform: translateY(-2px);
     box-shadow: $box-shadow-md;
   }

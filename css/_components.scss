@@ -389,7 +389,7 @@
     height: 150px;
     border-radius: $border-radius-full;
     object-fit: cover;
-    border: 5px solid rgba($color-primary, 0.2);
+    border: 5px solid rgba($color-primary, 0.7);
     margin: 0 auto $spacing-lg;
     box-shadow: $box-shadow-lg;
   }
@@ -435,7 +435,7 @@
   }
   
   @include respond-to(desktop) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -629,6 +629,7 @@
     box-shadow: $box-shadow-xl;
     animation: scaleIn 0.3s $ease-out-expo;
     z-index: 1;
+    overflow-y: auto;
     
     @include respond-to(tablet) {
       max-width: 800px;
