@@ -17,7 +17,7 @@ const projectData = {
     tags: ['HTML5', 'CSS3', 'JavaScript']
   },
   'Business WordPress Website': {
-    image: 'images/projects/rrrc-project-3.webp',
+    image: 'images/projects/rrrc-project-4.webp',
     title: 'Business WordPress Website',
     description: 'Custom WordPress theme for corporate website with blog, services, and contact sections.',
     tags: ['HTML5', 'CSS3', 'JavaScript', 'Wordpress']
@@ -39,13 +39,13 @@ const projectCards = document.querySelectorAll('.card--project');
 // Open modal function
 function openModal(projectTitle) {
   const project = projectData[projectTitle];
-  
+
   if (project) {
     modalImage.src = project.image;
     modalImage.alt = project.title;
     modalTitle.textContent = project.title;
     modalDescription.textContent = project.description;
-    
+
     // Clear and populate tags
     modalTags.innerHTML = '';
     project.tags.forEach(tag => {
@@ -54,7 +54,7 @@ function openModal(projectTitle) {
       tagElement.textContent = tag;
       modalTags.appendChild(tagElement);
     });
-    
+
     // Show modal
     modal.classList.add('active');
     document.body.style.overflow = 'hidden'; // Prevent scrolling
@@ -71,7 +71,7 @@ function closeModal() {
 projectCards.forEach(card => {
   const viewButton = card.querySelector('.btn');
   const projectTitle = card.querySelector('.card__title').textContent;
-  
+
   if (viewButton) {
     viewButton.addEventListener('click', (e) => {
       e.preventDefault();
